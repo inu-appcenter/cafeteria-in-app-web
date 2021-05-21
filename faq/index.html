@@ -12,9 +12,11 @@
             font-family: sans-serif;
         }
 
+        body {
+            margin: 0;
+        }
+
         .schema-faq-code {
-            border: 1px solid #dedee0;
-            border-radius: 10px;
             background-color: #fdfeff;
             overflow: hidden;
         }
@@ -58,7 +60,7 @@
         .faq-a {
             margin: 0;
             padding: 12px;
-            background-color: #fff;
+            background-color: #f0f0f0;
             font-size: 14px;
             line-height: 1.4;
             border-bottom: 1px solid #dedee0;
@@ -69,11 +71,9 @@
             border-bottom: 0;
         }
     </style>
-
 </head>
 
 <body>
-
 <div class="schema-faq-code" itemscope="" itemtype="https://schema.org/FAQPage">
     <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
         <h3 itemprop="name" class="faq-q">할인이 안 돼요</h3>
@@ -81,12 +81,9 @@
             <p itemprop="text" class="faq-a">
                 할인은 지정된 식당에서 지정된 시간에 하루에 한 번만 받으실 수 있습니다.
                 <br>
+                <br>하루에 같은 식당에서 두 번 이상 할인받는 것은 불가능하지만 두 식당에서 한 번씩 할인받는 것은 가능합니다. 예를 들어, 아침에 학식당에서, 점심에 사범대 식당에서 할인 혜택을 적용받으실 수 있습니다.
                 <br>
-                하루에 같은 식당에서 두 번 이상 할인받는 것은 불가능하지만 두 식당에서 한 번씩 할인받는 것은 가능합니다.
-                예를 들어, 아침에 학식당에서, 점심에 사범대 식당에서 할인 혜택을 적용받으실 수 있습니다.
-                <br>
-                <br>
-                만약 해당 조건을 모두 만족하였음에도 할인을 받지 못하신 경우, 인천대학교 앱센터, 또는 소비자생활협동조합에 문의하여 주시기 바랍니다.
+                <br>만약 해당 조건을 모두 만족하였음에도 할인을 받지 못하신 경우, 인천대학교 앱센터, 또는 소비자생활협동조합에 문의하여 주시기 바랍니다.
             </p>
         </div>
     </div>
@@ -115,7 +112,8 @@
                 먼저 이용에 불편을 드려 죄송합니다.
                 <br>
                 <br>카페테리아 서비스는 자발적으로 지원한 아주 소수의 인원으로 운영됩니다.
-                <br>많은 분께서 사용하시는 서비스인 만큼 책임감을 가지고 안정적으로 운영하기 위해 최선을 다하고 있지만, 미처 손이 닿지 못한 곳에서 발생한 문제들로 불편을 드리게 된 점 다시 한번 사과드립니다.
+                <br>많은 분께서 사용하시는 서비스인 만큼 책임감을 가지고 안정적으로 운영하기 위해 최선을 다하고 있지만, 미처 손이 닿지 못한 곳에서 발생한 문제들로 불편을 드리게 된 점 다시 한번
+                사과드립니다.
                 <br>
                 <br>앞으로도 서비스 개선을 위해 최선을 다하겠습니다.
             </p>
@@ -144,7 +142,7 @@
 </div>
 
 <script>
-    jQuery('.faq-q').click(function() {
+    jQuery('.faq-q').click(function () {
         if (jQuery(this).siblings().find('.faq-a').is(':visible')) {
             jQuery(this).removeClass('faq-q-open');
             jQuery(this).siblings().find('.faq-a').removeClass('faq-a-open').slideUp();
